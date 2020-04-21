@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeDex</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="css/wave.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header>
+    <div class="types__wrapper">
+      <nav>
+        <ul class="pokemon-filter">
+          <li class="filter__item">
+            <button class="btn --all --active" disabled data-type="all" type="button">All</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --normal" data-type="normal" type="button">Normal</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --fighting" data-type="fighting" type="button">Fighting</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --flying" data-type="flying" type="button">Flying</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --poison" data-type="poison" type="button">Poison</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --ground" data-type="ground" type="button">Ground</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --rock" data-type="rock" type="button">Rock</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --bug" data-type="bug" type="button">Bug</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --ghost" data-type="ghost" type="button">Ghost</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --steel" data-type="steel" type="button">Steel</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --fire" data-type="fire" type="button">Fire</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --water" data-type="water" type="button">Water</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --grass" data-type="grass" type="button">Grass</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --electric" data-type="electric" type="button">Electric</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --psychic" data-type="psychic" type="button">Psychic</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --ice" data-type="ice" type="button">Ice</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --dragon" data-type="dragon" type="button">Dragon</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --dark" data-type="dark" type="button">Dark</button>
+          </li>
+          <li class="filter__item">
+            <button class="btn --fairy" data-type="fairy" type="button">Fairy</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="search-from">
+      <input id="search-input" type="text" placeholder="Pokemon name e.g. Pikachu" autocomplete="off">
+    </div>
+  </header>
+  <main>
+    <section class="pokemons pokemons--active">
+      <ul class="pokemons__list">
+
+      </ul>
+      <button type="button" class="load-more-btn">LOAD MORE</button>
+    </section>
+    <section class="details">
+      <button type="button" class="back-btn"><i class="fas fa-times"></i></button>
+      <div class="details__content">
+        <div class="details-left">
+          <img class="details__pokemon-img" src="" alt="">
+          <h2 class="pokemon-name"></h2>
+        </div>
+        <div class="details-right">
+          <div class="description">
+            <h3 class="header__title">description</h3>
+            <p class="description__text"></p>
+          </div>
+          <div class="evolutions">
+            <h2 class="header__title">evolutions</h2>
+            <ul class="evolutions__list">
+            </ul>
+          </div>
+          <div class="stats">
+            <h3 class="header__title">STATS</h3>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td class="stat__name">HP</td>
+                  <td class="stat__progress">
+                    <span>
+                    </span>
+                  </td>
+                  <td class="stat__amount"></td>
+                </tr>
+                <tr>
+                  <td class="stat__name">ATK</td>
+                  <td class="stat__progress">
+                    <span>
+                    </span>
+                  </td>
+                  <td class="stat__amount"></td>
+                </tr>
+                <tr>
+                  <td class="stat__name">DEF</td>
+                  <td class="stat__progress">
+                    <span>
+                    </span>
+                  </td>
+                  <td class="stat__amount"></td>
+                </tr>
+                <tr>
+                  <td class="stat__name">SATK</td>
+                  <td class="stat__progress">
+                    <span>
+                    </span>
+                  </td>
+                  <td class="stat__amount"></td>
+                </tr>
+                <tr>
+                  <td class="stat__name">SDEF</td>
+                  <td class="stat__progress">
+                    <span>
+                    </span>
+                  </td>
+                  <td class="stat__amount"></td>
+                </tr>
+                <tr>
+                  <td class="stat__name">SPD</td>
+                  <td class="stat__progress">
+                    <span>
+                    </span>
+                  </td>
+                  <td class="stat__amount"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="wave-wrapper">
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    </section>
+  </main>
+
+
+  <template id="pokemon-card-temp">
+    <li class="pokemons__item">
+      <img class="pokemon-img lazy" src="img/loading.gif" width="130px" height="130px">
+      <div class="poke-profile">
+        <h2 class="pokemon-card__name"></h2>
+        <p class="pokemon-card__genus"></p>
+        <div class="pokemon-types"></div>
+        <div class="pokemon-stat --height"></div>
+        <div class="pokemon-stat --weight"></div>
+        <div class="pokemon-card__abilities"></div>
+        <h2 class="pokemon-id"></h2>
+      </div>
+    </li>
+  </template>
+  <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

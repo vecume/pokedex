@@ -1,0 +1,160 @@
+$color-white: #fff;
+$ice:#98d8d8;
+$poison:#a040a0;
+$rock:#b8a038;
+$water:#6890f0;
+$shadow:#66625c;
+$bug: #9cb820;
+$dragon: #7038f8;
+$fairy: #f09ad9;
+$fire: #f08030;
+$ghost:#705898;
+$ground: #e0b668;
+$normal:#a8a8a8;
+$psychic: #eb2d77;
+$steel: #6d8f9c;
+$dark: #504843;
+$electric:#c09643;
+$fighting:#c03028;
+$flying:#9096f0;
+$grass:#22c02a;
+
+
+@mixin type-color($color) {
+  color: $color;
+
+  &:hover {
+    background-color: rgba($color, .2); }
+
+  &.--active {
+    background-color: $color; } 
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  
+
+  &.--bug {
+    @include type-color($bug); }
+
+  &.--dragon {
+    @include type-color($dragon); }
+
+  &.--fairy {
+    @include type-color($fairy); }
+
+  &.--fire {
+    @include type-color($fire); }
+
+  &.--ghost {
+    @include type-color($ghost); }
+
+  &.--ground {
+    @include type-color($ground); }
+
+  &.--normal {
+    @include type-color($normal); }
+
+  &.--psychic {
+    @include type-color($psychic); }
+
+  &.--steel {
+    @include type-color($steel); }
+
+  &.--dark {
+    @include type-color($dark); }
+
+  &.--electric {
+    @include type-color($electric); }
+
+  &.--fighting {
+    @include type-color($fighting); }
+
+  &.--flying {
+    @include type-color($flying); }
+
+  &.--grass {
+    @include type-color($grass); }
+    
+  &.--ice {
+    @include type-color($ice); }
+
+  &.--poison {
+    @include type-color($poison); }
+
+  &.--rock {
+    @include type-color($rock); }
+
+  &.--water {
+    @include type-color($water); }
+
+  &.--shadow {
+    @include type-color($shadow); }
+}
+
+
+
+
+
+.--bug {
+  color: $bug; }
+
+.--dragon {
+  color: $dragon; }
+
+.--fairy {
+  color: $fairy; }
+
+.--fire {
+  color: $fire; }
+
+.--ghost {
+  color: $ghost; }
+
+.--ground {
+  color: $ground; }
+
+.--normal {
+  color: $normal; }
+
+.--psychic {
+  color: $psychic; }
+
+.--steel {
+  color: $steel; }
+
+.--dark {
+  color: $dark; }
+
+.--electric {
+  color: $electric; }
+
+.--fighting {
+  color: $fighting; }
+
+.--flying {
+  color: $flying; }
+
+.--grass {
+  color: $grass; }
+  
+.--ice {
+  color: $ice; }
+
+.--poison {
+  color: $poison; }
+
+.--rock {
+  color: $rock; }
+
+.--water {
+  color: $water; }
+
+.--shadow {
+  color: $shadow; }

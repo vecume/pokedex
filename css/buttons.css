@@ -1,0 +1,315 @@
+.btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn.--bug {
+  color: #9cb820;
+}
+
+.btn.--bug:hover {
+  background-color: rgba(156, 184, 32, 0.2);
+}
+
+.btn.--bug.--active {
+  background-color: #9cb820;
+}
+
+.btn.--dragon {
+  color: #7038f8;
+}
+
+.btn.--dragon:hover {
+  background-color: rgba(112, 56, 248, 0.2);
+}
+
+.btn.--dragon.--active {
+  background-color: #7038f8;
+}
+
+.btn.--fairy {
+  color: #f09ad9;
+}
+
+.btn.--fairy:hover {
+  background-color: rgba(240, 154, 217, 0.2);
+}
+
+.btn.--fairy.--active {
+  background-color: #f09ad9;
+}
+
+.btn.--fire {
+  color: #f08030;
+}
+
+.btn.--fire:hover {
+  background-color: rgba(240, 128, 48, 0.2);
+}
+
+.btn.--fire.--active {
+  background-color: #f08030;
+}
+
+.btn.--ghost {
+  color: #705898;
+}
+
+.btn.--ghost:hover {
+  background-color: rgba(112, 88, 152, 0.2);
+}
+
+.btn.--ghost.--active {
+  background-color: #705898;
+}
+
+.btn.--ground {
+  color: #e0b668;
+}
+
+.btn.--ground:hover {
+  background-color: rgba(224, 182, 104, 0.2);
+}
+
+.btn.--ground.--active {
+  background-color: #e0b668;
+}
+
+.btn.--normal {
+  color: #a8a8a8;
+}
+
+.btn.--normal:hover {
+  background-color: rgba(168, 168, 168, 0.2);
+}
+
+.btn.--normal.--active {
+  background-color: #a8a8a8;
+}
+
+.btn.--psychic {
+  color: #eb2d77;
+}
+
+.btn.--psychic:hover {
+  background-color: rgba(235, 45, 119, 0.2);
+}
+
+.btn.--psychic.--active {
+  background-color: #eb2d77;
+}
+
+.btn.--steel {
+  color: #6d8f9c;
+}
+
+.btn.--steel:hover {
+  background-color: rgba(109, 143, 156, 0.2);
+}
+
+.btn.--steel.--active {
+  background-color: #6d8f9c;
+}
+
+.btn.--dark {
+  color: #504843;
+}
+
+.btn.--dark:hover {
+  background-color: rgba(80, 72, 67, 0.2);
+}
+
+.btn.--dark.--active {
+  background-color: #504843;
+}
+
+.btn.--electric {
+  color: #c09643;
+}
+
+.btn.--electric:hover {
+  background-color: rgba(192, 150, 67, 0.2);
+}
+
+.btn.--electric.--active {
+  background-color: #c09643;
+}
+
+.btn.--fighting {
+  color: #c03028;
+}
+
+.btn.--fighting:hover {
+  background-color: rgba(192, 48, 40, 0.2);
+}
+
+.btn.--fighting.--active {
+  background-color: #c03028;
+}
+
+.btn.--flying {
+  color: #9096f0;
+}
+
+.btn.--flying:hover {
+  background-color: rgba(144, 150, 240, 0.2);
+}
+
+.btn.--flying.--active {
+  background-color: #9096f0;
+}
+
+.btn.--grass {
+  color: #22c02a;
+}
+
+.btn.--grass:hover {
+  background-color: rgba(34, 192, 42, 0.2);
+}
+
+.btn.--grass.--active {
+  background-color: #22c02a;
+}
+
+.btn.--ice {
+  color: #98d8d8;
+}
+
+.btn.--ice:hover {
+  background-color: rgba(152, 216, 216, 0.2);
+}
+
+.btn.--ice.--active {
+  background-color: #98d8d8;
+}
+
+.btn.--poison {
+  color: #a040a0;
+}
+
+.btn.--poison:hover {
+  background-color: rgba(160, 64, 160, 0.2);
+}
+
+.btn.--poison.--active {
+  background-color: #a040a0;
+}
+
+.btn.--rock {
+  color: #b8a038;
+}
+
+.btn.--rock:hover {
+  background-color: rgba(184, 160, 56, 0.2);
+}
+
+.btn.--rock.--active {
+  background-color: #b8a038;
+}
+
+.btn.--water {
+  color: #6890f0;
+}
+
+.btn.--water:hover {
+  background-color: rgba(104, 144, 240, 0.2);
+}
+
+.btn.--water.--active {
+  background-color: #6890f0;
+}
+
+.btn.--shadow {
+  color: #66625c;
+}
+
+.btn.--shadow:hover {
+  background-color: rgba(102, 98, 92, 0.2);
+}
+
+.btn.--shadow.--active {
+  background-color: #66625c;
+}
+
+.--bug {
+  color: #9cb820;
+}
+
+.--dragon {
+  color: #7038f8;
+}
+
+.--fairy {
+  color: #f09ad9;
+}
+
+.--fire {
+  color: #f08030;
+}
+
+.--ghost {
+  color: #705898;
+}
+
+.--ground {
+  color: #e0b668;
+}
+
+.--normal {
+  color: #a8a8a8;
+}
+
+.--psychic {
+  color: #eb2d77;
+}
+
+.--steel {
+  color: #6d8f9c;
+}
+
+.--dark {
+  color: #504843;
+}
+
+.--electric {
+  color: #c09643;
+}
+
+.--fighting {
+  color: #c03028;
+}
+
+.--flying {
+  color: #9096f0;
+}
+
+.--grass {
+  color: #22c02a;
+}
+
+.--ice {
+  color: #98d8d8;
+}
+
+.--poison {
+  color: #a040a0;
+}
+
+.--rock {
+  color: #b8a038;
+}
+
+.--water {
+  color: #6890f0;
+}
+
+.--shadow {
+  color: #66625c;
+}
+/*# sourceMappingURL=buttons.css.map */
