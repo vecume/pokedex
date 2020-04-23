@@ -130,7 +130,11 @@ function getEvolutionList(name) {
       }
     }
   });
-  return Object.values(evolutionList);
+  if (evolutionList) {
+    return Object.values(evolutionList);
+  } else {
+    return undefined;
+  }
 }
 
 

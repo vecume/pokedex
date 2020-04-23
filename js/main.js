@@ -27,7 +27,9 @@ elForm.addEventListener('keyup', (evt) => {
 
 //////////////////////////////
 
-
+window.addEventListener('keyup', (evt) => {
+  console.log(evt);
+});
 
 ///LOAD MORE////////////
 var counter = 0;
@@ -86,30 +88,36 @@ elAllPokemonsList.addEventListener('click', (evt) => {
     document.querySelector('.description__text').textContent = data[id - 1].description;
     const elEvolutionsList = document.querySelector('.evolutions__list');
     elEvolutionsList.innerHTML = '';
-    const evolutions = getEvolutionList(data[id - 1].name);
-    evolutions.forEach(e => {
-      if (typeof e !== 'number') {
-        const elLi = document.createElement('li');
-        const elImg = document.createElement('img');
-        const elH3 = document.createElement('h3');
-        elH3.textContent = e;
-        elImg.src = `https://www.serebii.net/art/th/${getPokemonIdByName(e)}.png`;
-        elImg.alt = e;
-        elLi.appendChild(elImg);
-        elLi.appendChild(elH3);
-        elEvolutionsList.appendChild(elLi);
-      }
-    });
+    if (getEvolutionList(data[id - 1].name)) {
+      const evolutions = getEvolutionList(data[id - 1].name);
+      evolutions.forEach(e => {
+        if (typeof e !== 'number') {
+          const elLi = document.createElement('li');
+          const elImg = document.createElement('img');
+          const elH3 = document.createElement('h3');
+          elH3.textContent = e;
+          elImg.src = `https://www.serebii.net/art/th/${getPokemonIdByName(e)}.png`;
+          elImg.alt = e;
+          elLi.appendChild(elImg);
+          elLi.appendChild(elH3);
+          elEvolutionsList.appendChild(elLi);
+        }
+      });
+    } else {
+      const elH3 = document.createElement('h3');
+      elH3.textContent = 'The Pokemon does not evolve!!!';
+      elH3.setAttribute('style', 'text-align:center;fonst-size:16px;font-weight:bold;');
+      elEvolutionsList.appendChild(elH3);
+    }
+    
     
     P.getPokemonByName(id)
     .then(function(response) {  
       const elsStats = document.querySelectorAll('.stat__progress span');
       const elsAmounts = document.querySelectorAll('.stat__amount');
       const stats = response.stats.reverse();
-      console.log(stats);
       for (let i = 0; i < stats.length; i++) {
         let percent = stats[i].base_stat / 200 * 100;
-        console.log(percent)
         elsStats[i].setAttribute('style', `width: ${percent}%; background: linear-gradient(to right, #${colorArr[1]}, #${colorArr[0]});`);
         elsAmounts[i].textContent = stats[i].base_stat;
       }
