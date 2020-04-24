@@ -27,9 +27,17 @@ elForm.addEventListener('keyup', (evt) => {
 
 //////////////////////////////
 
-window.addEventListener('keyup', (evt) => {
-  console.log(evt);
+window.addEventListener('mousedown', (evt) => {
+  if(evt.button === 3 && elAllPokemonsBox.style.display === 'none') {
+    elDetailsBox.classList.add('details--deactive');
+    elAllPokemonsBox.style.display = 'block';
+    setTimeout(function() {
+      document.querySelector('.details__pokemon-img').src = 'img/pokeball.png';
+    },1000);
+  }
 });
+
+// console.log(event)s
 
 ///LOAD MORE////////////
 var counter = 0;
@@ -47,7 +55,7 @@ elBackBtn.addEventListener('click', () => {
   elAllPokemonsBox.style.display = 'block';
   setTimeout(function() {
     document.querySelector('.details__pokemon-img').src = 'img/pokeball.png';
-  },1000)
+  },1000);
 }); 
 
 
